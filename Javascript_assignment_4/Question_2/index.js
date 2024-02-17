@@ -18,42 +18,101 @@
 
 // first case : test(callbackFunc)
 
-function test(callBackFunc){
+function test(callBackFunc) {
     callBackFunc()
 }
 
-function callBackFunc(){
+function callBackFunc() {
     console.log("Calling from the callback function")
     return 5
 }
 
 test(callBackFunc)
 
-// Output : calling from the callback function 
-// callback does not return explicitely value 
+// Output : calling from the callback function and we does not store the value so it will not return anything
+
+
+
+
 
 
 
 // second case : test(callbackFunc())
-// function test(callBackFunc()){
-//     callBack()
-// }
+function test(callBackFunc) {
+    callBackFunc()
+}
 
-// function callBackFunc(){
-//     console.log("Calling from the callback function")
-//     return 5
-// }
-// test(callBackFunc)
-// in this we can not pass the function as parameter it will give an syntax error
+function callBackFunc() {
+    console.log("Calling from the callback function")
+    return 5
+}
+test(callBackFunc())
+// in this we can get the error becuase we can the pass the result of the callback function not the function
+
+
+
+
+
 
 
 // third case : test(() => callbackFunc())
 
-test(() => callBackFunc())
+function test(callBackFunc) {
+    callBackFunc()
+}
 
-function callBackFunc(){
+const callBackFunc = () => {
     console.log("Calling from the callback function")
     return 5
 }
 
 test(callBackFunc)
+// output is Calling from the callback function and does not have any return value
+
+
+
+
+
+
+
+
+
+// fourth case return callBackFunc()
+function test(callback) {
+    return callback();
+}
+
+const callbackFunc = () => {
+    console.log("Calling the callback function");
+    return 5;
+};
+
+const result = test(callbackFunc);
+console.log(result);
+
+// output is Calling the callback function and having the return value 5
+
+
+
+
+
+
+
+
+
+
+// fifth case return callBackFunc
+
+function test(callback) {
+    return callback;
+}
+
+const callbackFunc = () => {
+    console.log("Calling the callback function");
+    return 5;
+};
+
+const result = test(callbackFunc);
+result();
+
+// output is Calling the callback function and having the return value 5
