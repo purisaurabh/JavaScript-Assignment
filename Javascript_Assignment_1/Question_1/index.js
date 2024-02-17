@@ -6,7 +6,7 @@ document.body.style.background = "blue";
 
 var a = 10
 var b = 20
- add()
+add()
  
 function add(){
  console.log(a+b)
