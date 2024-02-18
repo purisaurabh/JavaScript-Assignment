@@ -50,3 +50,8 @@ console.log("The type is :", typeof Symbol());
 //7) Array
 let arr = ["name" , "1" , null , NaN, true]
 console.log("The type of array :", typeof arr);
+//8 Date
+// Get the Current Time
+const date = new Date();
+console.log("The value :", date);
+console.log("The type is : " , typeof date);
