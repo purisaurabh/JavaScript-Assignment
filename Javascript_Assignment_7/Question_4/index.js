@@ -29,13 +29,13 @@ let users = [{
 
 const newObject = {}
 
-function mapBy(users, gender) {
+function groupBy(users, gender) {
     const groupByGender = users.filter((val) => val.gender == gender)
     newObject[gender] = groupByGender
 }
 
 users.map((val) => {
-    mapBy(users, val.gender)
+    groupBy(users, val.gender)
 })
 
 console.log(newObject);

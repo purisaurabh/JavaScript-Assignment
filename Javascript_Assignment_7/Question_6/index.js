@@ -30,17 +30,26 @@ let userEmails = [{
 }]
 
 
-const len = function(obj){
-    return Object.keys(obj).length
-}
 
 
 
 function mergeById(userNames, userEmails){
-    if(len(userEmails) == len(userNames)){
-        for(const key of userEmails){
-          console.log(key);
-        }
+    const mergedObject = {}
+    for(const val of userNames){
+        const id = val.id
+        mergedObject[id] = {...mergedObject[id] , ...val}
     }
+
+    for(const val of userEmails){
+        const id = val.id
+        mergedObject[id] = {...mergedObject[id] , ...val}
+    }
+
+    return Object.values(mergedObject)
 }
-mergeById(userNames , userEmails)
+
+
+
+
+const result = mergeById(userNames , userEmails)
+console.log("The merged object : " , result);
