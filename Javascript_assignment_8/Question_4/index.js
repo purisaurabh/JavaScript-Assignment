@@ -10,4 +10,4 @@ testAsyncFunction()
     .catch((err) => console.log('Error in catch block', err));
 
 
-// Output : Error in cathc block Test static reject
+// Output : Error in catch block Test static reject 
