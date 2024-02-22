@@ -11,15 +11,17 @@
 </head>
 
 <body>
-    <form onsubmit="submitBlog(event)">
-        <label>Title : </label>
-        <input id="title" type="text">
-        <label>Description : </label>
-        <input id="description" type="text">
-        <label>Blog content : </label>
-        <input id="content" type="text">
-        <button type="submit">Submit</button>
-        <script src="index.js"></script>
+    <form id="blogForm">
+        <label>Title: </label>
+        <input id="title" type="text" required>
+        
+        <label>Description: </label>
+        <textarea id="description" rows="4" required></textarea>
+        
+        <label>Content: </label>
+        <textarea id="content" rows="8" required></textarea>
+
+        <button type="button" onclick="submitBlog()">Submit</button>
     </form>
 </body>
 

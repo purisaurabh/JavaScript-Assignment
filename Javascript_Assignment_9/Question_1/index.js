@@ -1,25 +1,23 @@
 
 
-function submitBlog(event) {
-    event.preventDefault()
+async function submitBlog() {
+
     const url = 'https://reqres.in/api/blogs'
 
-    const title = document.getElementById('title').value
-    const description = document.getElementById('description').value
-    const content = document.getElementById('content').value
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const content = document.getElementById('content').value;
 
+    try{
+        const response = await axios.post(url, {
+            title: title,
+            description: description,
+            content: content
+        });
 
-
-    const name = document.getElementById('name').value
-    const job = document.getElementById('job').value
-
-    axios.post(url, {
-        name: name,
-        job: job
-    })
-        .then((res) => {
-            console.log("Response : ", res)
-        })
-        .catch((err) => console.log(err))
+        console.log("Response : " , response.data)
+    }catch(err){
+        console.log("Error is : " , err);
+    }
 }
 

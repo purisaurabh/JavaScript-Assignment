@@ -5,7 +5,7 @@ async function fetchData(){
         const data = await response.json()
         return data.users
     } catch (error) {
-        console.log("Error: " , error);
+        console.log("Error is: " , error);
     }
 }
 
