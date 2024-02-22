@@ -4,8 +4,8 @@
 
 let value = ["number", 21, "str", "Immanuel"];
 let result = JSON.stringify(value);
-console.log("value of result = " + result);
-console.log("type of result = " + typeof result);
+console.log("value of result = " , result);
+console.log("type of result = " , typeof result);
 
 
 // It si possible to use stringify method for an array
