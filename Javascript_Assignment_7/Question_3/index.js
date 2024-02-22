@@ -15,11 +15,8 @@ let users = [{
 const newObject = {}
 
 function mapBy(users , first_name){
-    
     const firstNameValues = users.filter( (val) => val.first_name === first_name)
-    // console.log(firstNameValues);
     newObject[first_name] = firstNameValues
-
 }
 
 
