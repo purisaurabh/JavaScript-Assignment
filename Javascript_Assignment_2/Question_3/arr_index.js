@@ -64,7 +64,8 @@ console.log("The type of letArr is :" , typeof letArr); // string
 
 
 
-// Object
+
+// using const
 let constArr = ["GoLang", "React" , "Angular" , "ROR"]
 
 console.log(constArr[0]);
