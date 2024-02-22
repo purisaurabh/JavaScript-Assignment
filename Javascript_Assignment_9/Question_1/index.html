@@ -1,0 +1,26 @@
+<!-- ● Create a form to submit a blog to a mock API (reqres.in) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form onsubmit="submitBlog(event)">
+        <label>Title : </label>
+        <input id="title" type="text">
+        <label>Description : </label>
+        <input id="description" type="text">
+        <label>Blog content : </label>
+        <input id="content" type="text">
+        <button type="submit">Submit</button>
+        <script src="index.js"></script>
+    </form>
+</body>
+
+</html>
