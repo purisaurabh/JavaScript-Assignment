@@ -103,7 +103,6 @@ console.log("The array by id using the filter :" , getByIdUsingFilter(1));
 
 
 // second method using the Array.find
-
 function getByIdUsingFind(id)   {
     let res = arrObject.find(value => value.id === id)
     return res
