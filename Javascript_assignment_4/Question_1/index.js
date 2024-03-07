@@ -12,18 +12,15 @@
     and same it will work for the if block as well the execution
 */
 
+iterateFunction();
 
-iterateFunction()
-
-function iterateFunction(){
-    for(let i = 0; i < 10 ; i++){
-        if(i == 5){
-            console.log("Loop end here with retunr statement");
-            return
-        }
-        console.log(i);
+function iterateFunction() {
+  for (let i = 0; i < 10; i++) {
+    if (i == 5) {
+      console.log("Loop end here with retunr statement");
+      return;
     }
-    console.log("Here are the some function which will not be executed at all");
+    console.log(i);
+  }
+  console.log("Here are the some function which will not be executed at all");
 }
-
-
